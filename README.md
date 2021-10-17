@@ -1,3 +1,9 @@
 # KG-Share
 
-npx mmdc -i chart1.mmd -o chart1.png
+## Quick Start
+
+```bash
+npx mmdc -i chart*.mmd -o chart*.png
+marp index.md
+marp --pdf index.md --allow-local-files
+```
