@@ -241,6 +241,83 @@ A structure from CSDN(author: coder_oyang)
 
 ---
 
+# Complex Case 1: 
+
+
+> Property vs Relationship
+
+```
+//find which movies share genres
+MATCH (m1:Movie), (m2:Movie)
+WHERE any(x IN m1.genre WHERE x IN m2.genre)
+AND m1 <> m2
+RETURN m1, m2;
+```
+
+
+![h:200 drop-shadow](https://dist.neo4j.com/wp-content/uploads/modeling_genre_node.jpg)
+
+![bg h:200 vertical right drop-shadow](https://dist.neo4j.com/wp-content/uploads/modeling_genre_property.jpg)
+
+![bg h:300  drop-shadow](https://pic4.zhimg.com/80/v2-05ecbec555a42ea0199f810a78b4ba8f_720w.jpg)
+
+
+---
+
+# Complex Case 2: 
+
+> Hyperedges or Intermediate Nodes
+
+
+**Cypher Target**:Coappearance
+
+```
+MATCH (a:Moment)--(b:Role) WHERE b.name == "Alias"
+WITH a as a1
+MATCH (a:Moment)--(b:Role) WHERE b.name == "Person"
+WITH a as a2
+WITH apoc.coll.intersection(a1, a2) as a3
+RETURN a3
+```
+
+```
+MATCH (c:Appearance = "Alias-Person")
+```
+
+![bg h:300 vertical right drop-shadow](https://dist.neo4j.com/wp-content/uploads/modeling_marvel_hyperedge_appearance.jpg)
+![bg h:300  drop-shadow](https://pic4.zhimg.com/80/v2-05ecbec555a42ea0199f810a78b4ba8f_720w.jpg)
+
+---
+
+# Complex Case 3: 
+
+
+> Property vs Relationship
+
+
+**Cypher Target**:Flight Date
+
+![h:200 drop-shadow](https://dist.neo4j.com/wp-content/uploads/modeling_airport_flight_dates.jpg)
+
+![bg h:200 vertical right drop-shadow](https://dist.neo4j.com/wp-content/uploads/modeling_airport_flights.jpg)
+
+![bg h:300  drop-shadow](https://pic4.zhimg.com/80/v2-05ecbec555a42ea0199f810a78b4ba8f_720w.jpg)
+
+
+---
+
+# My Bad Case&A Good Case: 
+
+**False Litigation**
+
+![bg right h:450 drop-shadow](law_graph.jpeg)
+
+
+**Salesman Outlier Dection**
+
+
+---
+
 # 图谱应用工具
 
 - 知识表示：[清华大学OpenKE]()
