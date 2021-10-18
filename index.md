@@ -222,14 +222,22 @@ A structure from CSDN(author: coder_oyang)
 
 # Neo4j生态
 
+![bg h:400 drop-shadow](neo4j_eco.png)
+![bg h:400 drop-shadow](neo4j_product.png)
 
 ---
 
 # Transfer from RDBMS
 
+![bg h:400 drop-shadow](https://dist.neo4j.com/wp-content/uploads/relational_org_chart.jpg)
+![bg h:400 drop-shadow](https://dist.neo4j.com/wp-content/uploads/graph_org_chart.jpg)
+
 ---
 
 # Schema: Model Design
+
+![bg h:300 drop-shadow](https://dist.neo4j.com/wp-content/uploads/matrix_whiteboard_model2.png)
+![bg h:300 drop-shadow](https://dist.neo4j.com/wp-content/uploads/matrix_whiteboard_model3.png)
 
 ---
 
