@@ -162,6 +162,17 @@ Rules of Machine Learning: Best Practices for ML Engineering [link](https://deve
 
 ---
 
+# Surprise?
+
+Data Version Control(Boom!)
+
+Continuous Training Pipeline
+
+
+![bg right h:450 drop-shadow](iterative_ai.png)
+
+---
+
 # Knowledge Extraction System
 
 A structure from CSDN(author: coder_oyang)
